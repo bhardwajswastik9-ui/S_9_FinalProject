@@ -1,0 +1,81 @@
+.toggle-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.toggle-wrap.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.toggle-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.toggle-label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.toggle-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.toggle-switch {
+    position: relative;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.3s ease, box-shadow 0.2s ease;
+    padding: 0;
+}
+
+.toggle-switch.md {
+    width: 48px;
+    height: 26px;
+}
+
+.toggle-switch.sm {
+    width: 32px;
+    height: 18px;
+}
+
+.toggle-switch.on {
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.4);
+}
+
+.toggle-switch.off {
+    background: var(--border-strong);
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 2px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch.md .toggle-thumb {
+    width: 22px;
+    height: 22px;
+}
+
+.toggle-switch.sm .toggle-thumb {
+    width: 14px;
+    height: 14px;
+}
+
+.toggle-switch:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
